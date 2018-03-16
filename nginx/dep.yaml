@@ -1,21 +1,21 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  name: k8sdemo
+  name: ppt
   labels:
-    app: httpd
+    app: sk
 spec:
   replicas: 4
   selector:
     matchLabels:
-      app: httpd
+      app: sk
   template:
     metadata:
       labels:
-        app: httpd
+        app: sk
     spec:
       containers:
-      - name: httpd
-        image: httpd
+      - name: sk1
+        image: nginx:latest
         ports:
         - containerPort: 80
